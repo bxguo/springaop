@@ -11,6 +11,6 @@ import org.springframework.context.annotation.ImportResource;
 @Configuration
 @EnableAspectJAutoProxy
 @ComponentScan("com.aop")
-@ImportResource("classpath:aop.xml")
 public class AppConfig {
+
 }

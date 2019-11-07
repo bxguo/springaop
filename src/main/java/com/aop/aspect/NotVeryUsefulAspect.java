@@ -17,7 +17,6 @@ public class NotVeryUsefulAspect {
 
     @Before("anyOldTransfer()")
     public void beforeAdvice(){
-        System.out.println("before");
+        System.out.println("数据库操作 ---start---");
     }
-
 }

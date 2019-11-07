@@ -1,7 +1,7 @@
 import com.aop.config.AppConfig;
-import com.aop.dao.DaoImpl;
+import com.aop.dao.CityDao;
+import com.aop.service.CityService;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
-import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 /**
  * Created by bxguo on 2019/10/28 22:42
@@ -9,8 +9,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 public class Test {
     public static void main(String[] args) {
         AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(AppConfig.class);
-//        ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("aop.xml");
-        DaoImpl bean = context.getBean(DaoImpl.class);
-        bean.query();
+        CityService bean =  context.getBean(CityService.class);
+        System.out.println(bean.query());
     }
 }
